@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Элина Щербакова](https://up.htmlacademy.ru/htmlcss/21/user/621979).
-* Наставник: [Наталья Ильина] (https://htmlacademy.ru/profile/ellianta).
+* Наставник: [Наталья Ильина из г.Владимир] (https://htmlacademy.ru/profile/ellianta).
 
 ---
 
