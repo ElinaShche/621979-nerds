@@ -127,9 +127,9 @@
           
           <section class="social">
               <ul class="social-list">
-                  <li><a class="social-button" href="#">В контакте</a></li>
-                  <li><a class="social-button" href="#">Фейсбук</a></li>
-                  <li><a class="social-button" href="#">Инстаграм</a></li>
+                  <li><a class="button social-button" href="#">В контакте</a></li>
+                  <li><a class="button social-button" href="#">Фейсбук</a></li>
+                  <li><a class="button social-button" href="#">Инстаграм</a></li>
               </ul>
               <b>Давайте дружить, это выгодно!</b>
               <p>Скидка 10% для друзей из социальных сетей.</p>
@@ -137,7 +137,17 @@
       </footer>
       
       <section class="modal">
-              <!-- Форма-->
+          <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+              <fieldset>
+              <h2>Напишите нам</h2>
+              <label for="password">Ваше имя:</label>
+              <input type="text" name="username" id="password" value="Имя Фамилия" required>   
+              <label for="email">Ваш e-mail:</label>
+              <input type="email" name="email" id="email" value="email@example.com" required><br>       
+              <label for="text-field">Текст письма:</label><br>
+              <textarea name="text" id="text-field" rows="5" cols="" required>В свободной форме</textarea>
+          </fieldset>
+          </form>   
           </section>
   </body>
 </html>
