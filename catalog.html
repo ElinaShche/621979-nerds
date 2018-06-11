@@ -27,16 +27,15 @@
               <form class="filter" method="get" action="https://echo.htmlacademy.ru">
               <fieldset>
               <legend>Стоимость</legend>
-                  <div><!-- Блок для шкалы и контролов-->
-                    <input type="checkbox" id="answer1">
-                    <label for="answer1"></label>
-                    <input type="checkbox" id="answer2">
-                    <label for="answer2"></label>
-                </div>
-                  <label for="input-cost-min">от</label>
-                  <input type="number" name="cost" id="input-cost-min" value="0">
-                  <label for="input-cost-max">до</label>
-                  <input type="number" name="cost" id="input-cost-max" value="15000">
+                      <div class="range-controls">
+                            <div class="scale"></div>
+                            <div class="toggle min-toggle"></div>
+                            <div class="toggle max-toggle"></div>
+                      </div>
+                      <div class="price-controls">
+                от <input class="min-price" type="text" value="0">
+                до <input class="max-price" type="text" value="15 000">
+                      </div>
               </fieldset>
               <fieldset>
                  <legend>Сортировать:</legend>
