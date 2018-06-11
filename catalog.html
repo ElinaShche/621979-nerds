@@ -27,7 +27,12 @@
               <form class="filter" method="get" action="https://echo.htmlacademy.ru">
               <fieldset>
               <legend>Стоимость</legend>
-                  <input type="range" name="cost" min="0" max="15000" >
+                  <div><!-- Блок для шкалы и контролов-->
+                    <input type="checkbox" id="answer1">
+                    <label for="answer1"></label>
+                    <input type="checkbox" id="answer2">
+                    <label for="answer2"></label>
+                </div>
                   <label for="input-cost-min">от</label>
                   <input type="number" name="cost" id="input-cost-min" value="0">
                   <label for="input-cost-max">до</label>
@@ -184,7 +189,7 @@
               <textarea name="text" id="text-field" rows="5" placeholder="В свободной форме" required></textarea>
               <button type="submit">Отправить</button>
           </form>
-          <div class="modal-close">x</div>
+          <button type="button">x</button>
           </section>
   </body>
 </html>
