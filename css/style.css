@@ -1,0 +1,347 @@
+Папка для стилевых файлов.
+
+--
+
+Пример структуры файлов:
+
+css/
+| - style.css
+| - [другие *.css файлы]
+
+body,
+.inner-page body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    
+    background-color: #ffffff;
+    }
+/** Активность логотипа - правильно?
+
+.main-header-logo a:link {
+    opacity: 1;
+}
+
+.main-header-logo a:hover {
+    opacity: 0.8;
+}
+
+.main-header-logo a:active {
+    opacity: 0.3;
+}
+*/
+
+a {
+    font: inherit;
+    color: #ffffff;
+    font-family: "Roboto";
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    list-style: none;
+    }
+
+.main-header {
+    background-color: #eeeeee;
+    }
+
+.navigation-link a {   
+    font-size: 16px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.navigation-link a:link {
+    color: #000000; 
+}
+
+.navigation-link a:hover {
+    color: #fb565a;
+}
+
+.navigation-link a:focus {
+    opacity: 0.3;
+}
+
+.navigation-link a:active {
+    border-bottom: 2px solid #fb5559;
+}
+
+.slider-item h2,
+.page-header h2 {
+    font-size: 55px;
+    line-height: 55px;
+    color: #000000;
+}
+
+p,
+.features-item li {
+    font-size: 16px;
+    line-height: 24px;
+    color: #283136;
+}
+
+.button {
+    font-family: inherit;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
+.slider-item .button a,
+.promo-item .button a {
+    color: #ffffff;
+    background-color: #fb5559;
+}
+
+.slider-item .button a:link,
+.veb-sites .button a:link,
+.contacts .button a,
+.modal {
+    background-color: #fb5559;
+}
+
+.slider-item .button a:hover,
+.veb-sites .button a:hover,
+.social button a:hover {
+    background-color: #e74246;
+}
+
+.slider-item .button a:active,
+.veb-sites .button a:active,
+.social button a:active {
+    background-color: #d7363a;
+}
+
+.promo-item h2 {
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.attachment .button a:link {
+    background-color: #00c973;
+}
+
+.attachment .button a:hover {
+    background-color: #00bc6b;
+}
+
+.attachment .button a:active {
+    background-color: #00aa61;
+}
+
+.present .button a:link {
+    background-color: #efc749;
+}
+
+.present .button a:hover {
+    background-color: #eab434;
+}
+
+.present .button a:active {
+    color: #ffffff;
+    background-color: #e5a722;
+}
+
+.features h3,
+.modal h2 {
+    font-size: 45px;
+    line-height: 45px;
+    color: #000000;
+}
+
+b {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    font-weight: bold;  
+}
+
+.aside tr:first-child {
+    font-size: 45px;
+    line-height: 10px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.aside tr:last-child {
+    font: inherit;
+    color: #283136;
+}
+
+.block-item a:link {
+    opacity: 0.2;
+}
+
+.block-item a:hover {
+    opacity: 1;
+}
+
+.block-item a:active {
+    opacity: 0.1;
+}
+
+.contacts {
+    color: #666666;
+    background-color: #ffffff;
+}
+
+.contacts h4 {
+    font-size: 18px;
+    line-height: 30px;
+    color: #000000;
+    font-weight: bold;
+} 
+
+
+
+.social b{
+    font-size: 36px;
+    line-height: 36px;
+    color: #000000;
+    font-weight: bold;
+}
+
+social p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #444444;
+}
+
+social button a:link {
+    background-color: #ffffff;
+} 
+
+.modal {
+    background-color: #e9e5dc;
+}
+
+.modal label {
+    font: inherit;
+    color: #000000;
+    font-weight: bold;
+}
+
+.modal input {
+    font: inherit;
+    background-color: #ffffff;
+}
+
+.modal input:link {
+    color: #444444;
+    opacity: 0.5; 
+    border: 2px solid #d7dbdd; 
+}
+
+.modal input:hover {
+    color: #444444;
+    opacity: 0.5;
+    border: 2px solid #b3b8bb;
+}
+
+.modal input:focus {
+    color: #444444;
+    border: 2px solid #000000;
+}
+
+.modal input:invalid {
+    color: #e74246;
+    border: 2px solid #e74145;
+}
+
+.modal button[type="submit"] {
+    color: #ffffff;
+    background-color: #fb5559;
+}
+
+.modal button[type="button"]:link {
+    color: #fecccd;
+}
+
+.modal button[type="button"]:hover {
+    color: #fb565a;
+}
+
+.modal button[type="button"]:active {
+    color: #ffeeee;
+}
+
+.filter fieldset {
+    border: none;
+}
+
+.filters legend {
+    font-size: 18px;
+    line-height: 18px;
+    color: 000000;
+    font-weight: bold;
+}
+
+.range-controls {
+    background-color: ededed;
+}
+
+.sort-title a {
+    font-size: 14px;
+    line-height: 18px;
+    color: 000000;
+}
+
+.sort-title a:link {
+    opacity: 0.3;
+}
+
+.sort-title a:hover {
+    opacity: 0.6;
+}
+
+.filter-input-radio input[type="radio"]+label,
+.checked input[type="radio"]+label,
+.filter-input-checkbox input[type="checkbox"]+label,
+.checked input[type="checkbox"]+label {
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #ffffff;
+}
+
+.filter-input-radio:link + label ,
+.filter-input-radio:disabled +label,
+.filter-input-checkbox:link + label,
+.filter-input-checkbox:hover + label,
+.filter-input-checkbox:disabled +label {
+    color: #283136;
+}
+
+.filter-input-radio:hover + label {
+    color: #000000;
+}
+
+.filter-input-radio:disabled +label,
+.filter-input-checkbox:disabled +label {
+    opacity: 0.3;
+}
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
