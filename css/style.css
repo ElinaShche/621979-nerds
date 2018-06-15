@@ -21,22 +21,21 @@ body,
     }
 /** Активность логотипа - правильно?
 
-.main-header-logo a:link {
+.main-header-logo:link {
     opacity: 1;
 }
 
-.main-header-logo a:hover {
+.main-header-logo:hover {
     opacity: 0.8;
 }
 
-.main-header-logo a:active {
+.main-header-logo:active {
     opacity: 0.3;
 }
 */
 
 a {
     font: inherit;
-    color: #ffffff;
     font-family: "Roboto";
     text-align: center;
     vertical-align: middle;
@@ -48,25 +47,25 @@ a {
     background-color: #eeeeee;
     }
 
-.navigation-link a {   
+.navigation-link {   
     font-size: 16px;
     line-height: 30px;
     color: #000000;
 }
 
-.navigation-link a:link {
+.navigation-link:link {
     color: #000000; 
 }
 
-.navigation-link a:hover {
+.navigation-link:hover {
     color: #fb565a;
 }
 
-.navigation-link a:focus {
+.navigation-link:focus {
     opacity: 0.3;
 }
 
-.navigation-link a:active {
+.navigation-link:active {
     border-bottom: 2px solid #fb5559;
 }
 
@@ -78,7 +77,7 @@ a {
 }
 
 p,
-.features-item li {
+.features-item {
     font-size: 16px;
     line-height: 24px;
     color: #283136;
@@ -91,28 +90,28 @@ p,
     text-transform: uppercase;
 }
 
-.slider-item .button a,
-.promo-item .button a {
+.slider-item .button,
+.promo-item .button {
     color: #ffffff;
     background-color: #fb5559;
 }
 
-.slider-item .button a:link,
-.veb-sites .button a:link,
-.contacts .button a,
+.slider-item .button:link,
+.veb-sites .button:link,
+.contacts .button,
 .modal {
     background-color: #fb5559;
 }
 
-.slider-item .button a:hover,
-.veb-sites .button a:hover,
-.social button a:hover {
+.slider-item .button:hover,
+.veb-sites .button:hover,
+.social .button:hover {
     background-color: #e74246;
 }
 
-.slider-item .button a:active,
-.veb-sites .button a:active,
-.social button a:active {
+.slider-item .button:active,
+.veb-sites .button:active,
+.social .button:active {
     background-color: #d7363a;
 }
 
@@ -123,27 +122,27 @@ p,
     font-weight: bold;
 }
 
-.attachment .button a:link {
+.attachment .button:link {
     background-color: #00c973;
 }
 
-.attachment .button a:hover {
+.attachment .button:hover {
     background-color: #00bc6b;
 }
 
-.attachment .button a:active {
+.attachment .button:active {
     background-color: #00aa61;
 }
 
-.present .button a:link {
+.present .button:link {
     background-color: #efc749;
 }
 
-.present .button a:hover {
+.present .button:hover {
     background-color: #eab434;
 }
 
-.present .button a:active {
+.present .button:active {
     color: #ffffff;
     background-color: #e5a722;
 }
@@ -162,27 +161,27 @@ b {
     font-weight: bold;  
 }
 
-.aside tr:first-child {
+.aside .top {
     font-size: 45px;
     line-height: 10px;
     color: #000000;
     font-weight: bold;
 }
 
-.aside tr:last-child {
+.aside .bottom {
     font: inherit;
     color: #283136;
 }
 
-.block-item a:link {
+.block-item:link {
     opacity: 0.2;
 }
 
-.block-item a:hover {
+.block-item:hover {
     opacity: 1;
 }
 
-.block-item a:active {
+.block-item:active {
     opacity: 0.1;
 }
 
@@ -191,29 +190,31 @@ b {
     background-color: #ffffff;
 }
 
-.contacts h4 {
+.contacts h4,
+.product-item {
     font-size: 18px;
     line-height: 30px;
     color: #000000;
     font-weight: bold;
+    text-align: center;
 } 
 
 
 
-.social b{
+.social b {
     font-size: 36px;
     line-height: 36px;
     color: #000000;
     font-weight: bold;
 }
 
-social p {
+.social p {
     font-size: 16px;
     line-height: 22px;
     color: #444444;
 }
 
-social button a:link {
+.social-button:link {
     background-color: #ffffff;
 } 
 
@@ -221,7 +222,7 @@ social button a:link {
     background-color: #e9e5dc;
 }
 
-.modal label {
+.modal .help-block {
     font: inherit;
     color: #000000;
     font-weight: bold;
@@ -254,76 +255,121 @@ social button a:link {
     border: 2px solid #e74145;
 }
 
-.modal button[type="submit"] {
+.modal .submit-button {
     color: #ffffff;
     background-color: #fb5559;
 }
 
-.modal button[type="button"]:link {
+.modal .close-button:link {
     color: #fecccd;
 }
 
-.modal button[type="button"]:hover {
+.modal .close-button:hover {
     color: #fb565a;
 }
 
-.modal button[type="button"]:active {
+.modal .close-button:active {
     color: #ffeeee;
 }
 
-.filter fieldset {
+.filter {
     border: none;
 }
 
-.filters legend {
+.short-title {
     font-size: 18px;
     line-height: 18px;
-    color: 000000;
+    color: #000000;
     font-weight: bold;
 }
 
-.range-controls {
-    background-color: ededed;
+.range-controls,
+.filter .submit-button:link,
+.pagination-link:link {
+    background-color: #ededed;
 }
 
-.sort-title a {
+.sort-link:focus,
+.sort-link:active {
     font-size: 14px;
     line-height: 18px;
-    color: 000000;
-}
-
-.sort-title a:link {
-    opacity: 0.3;
-}
-
-.sort-title a:hover {
-    opacity: 0.6;
-}
-
-.filter-input-radio input[type="radio"]+label,
-.checked input[type="radio"]+label,
-.filter-input-checkbox input[type="checkbox"]+label,
-.checked input[type="checkbox"]+label {
-    font-size: 16px;
-    line-height: 20px;
-    background-color: #ffffff;
-}
-
-.filter-input-radio:link + label ,
-.filter-input-radio:disabled +label,
-.filter-input-checkbox:link + label,
-.filter-input-checkbox:hover + label,
-.filter-input-checkbox:disabled +label {
-    color: #283136;
-}
-
-.filter-input-radio:hover + label {
     color: #000000;
 }
 
-.filter-input-radio:disabled +label,
-.filter-input-checkbox:disabled +label {
+.sort-link:link {
     opacity: 0.3;
+}
+
+.sort-link:hover {
+    opacity: 0.6;
+}
+
+.filter-option .desc,
+.filter-option .check {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.input-radio .desc:link,
+.input-radio .desc:disabled,
+.input-checkbox .check:link,
+.input-checkbox .check:hover,
+.input-checkbox .check:disabled {
+    color: #283136;
+}
+
+.input-radio .desc:hover {
+    color: #000000;
+}
+
+.input-radio .desc:disabled,
+.input-checkbox .check:disabled {
+    opacity: 0.3;
+}
+
+.filter .submit-button:link
+.filter .submit-button:hover,
+.pagination-link:link,
+.pagination-link:hover,
+.pagination-link:active{
+    font: inherit;
+    color: #000000;
+}
+
+.filter .submit-button:hover,
+.pagination-link:hover {
+    background-color: #dfdfdf;
+}
+
+.filter .submit-button:focus,
+.pagination-link:focus, {
+    color: rgba(0,0,0,0.3);
+    background-color: #d5d5d5;
+    border-top: 2px solid #c0c0c0;
+}
+
+.pagination-link:active {
+    background-color: #ffffff;
+    border: 2px solid #dbdbdb;
+}
+
+
+.product-link .button {
+    font: inherit;
+    color: #ffffff;
+    text-align: center;
+}
+
+.product-link .button:link {
+    background-color: #fb5559;
+}
+
+.product-link .button:hover {
+    background-color: #e74246;
+}
+
+.product-link .button:focus {
+    background-color: #d7363a;
 }
 
 

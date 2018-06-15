@@ -96,12 +96,12 @@
               <img src="img/nerds-illustration.jpg" width="360" height="208" alt="Нердс-иллюстрация">
               <b>С 2004 года любим точность во всем:</b>
               <table>
-                  <tr>
-                      <td>146%</td>
+                  <tr class="top">
+                      <td>146<sup>%</sup></td>
                       <td>100<sup>%</sup></td>
                       <td>50<sup>%</sup></td>
                   </tr>
-                  <tr>
+                  <tr class="bottom">
                       <td>Уровень самоотдачи</td>
                       <td>Соблюдение сроков</td>
                       <td>Минимальная предоплата</td>
@@ -142,15 +142,15 @@
       <section class="modal">
           <form class="filter" method="get" action="https://echo.htmlacademy.ru">
               <h2>Напишите нам</h2>
-              <label for="password">Ваше имя:</label>
+              <label for="password" class="help-block">Ваше имя:</label>
               <input type="text" name="username" id="password" placeholder="Имя Фамилия" required>   
-              <label for="email">Ваш e-mail:</label>
+              <label for="email" class="help-block">Ваш e-mail:</label>
               <input type="email" name="email" id="email" placeholder="email@example.com" required><br>       
-              <label for="text-field">Текст письма:</label><br>
+              <label for="text-field" class="help-block">Текст письма:</label><br>
               <textarea name="text" id="text-field" rows="5"  placeholder="В свободной форме" required></textarea>
-          <button type="submit">Отправить</button>
+          <button type="submit" class="submit-button">Отправить</button>
           </form>  
-          <button type="button">x</button>
+          <button type="button" class="close-button">x</button>
           </section>
   </body>
 </html>
