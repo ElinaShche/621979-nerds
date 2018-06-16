@@ -19,20 +19,19 @@ body,
     
     background-color: #ffffff;
     }
-/** Активность логотипа - правильно?
 
-.main-header-logo:link {
+.main-header-logo {
     opacity: 1;
 }
 
-.main-header-logo:hover {
+.main-header-logo:hover,
+.main-header-logo:focus {
     opacity: 0.8;
 }
 
 .main-header-logo:active {
     opacity: 0.3;
 }
-*/
 
 a {
     font: inherit;
@@ -47,17 +46,15 @@ a {
     background-color: #eeeeee;
     }
 
-.navigation-link {   
+.navigation-link,
+.navigation-link:active {   
     font-size: 16px;
     line-height: 30px;
     color: #000000;
 }
 
-.navigation-link:link {
-    color: #000000; 
-}
-
-.navigation-link:hover {
+.navigation-link:hover,
+.navigation-link:focus {
     color: #fb565a;
 }
 
@@ -96,8 +93,8 @@ p,
     background-color: #fb5559;
 }
 
-.slider-item .button:link,
-.veb-sites .button:link,
+.slider-item .button,
+.veb-sites .button,
 .contacts .button,
 .modal {
     background-color: #fb5559;
@@ -105,7 +102,10 @@ p,
 
 .slider-item .button:hover,
 .veb-sites .button:hover,
-.social .button:hover {
+.social .button:hover,
+.slider-item .button:focus,
+.veb-sites .button:focus,
+.social .button:focus {
     background-color: #e74246;
 }
 
@@ -122,11 +122,12 @@ p,
     font-weight: bold;
 }
 
-.attachment .button:link {
+.attachment .button {
     background-color: #00c973;
 }
 
-.attachment .button:hover {
+.attachment .button:hover,
+.attachment .button:focus {
     background-color: #00bc6b;
 }
 
@@ -134,11 +135,12 @@ p,
     background-color: #00aa61;
 }
 
-.present .button:link {
+.present .button {
     background-color: #efc749;
 }
 
-.present .button:hover {
+.present .button:hover,
+.present .button:focus {
     background-color: #eab434;
 }
 
@@ -173,11 +175,12 @@ b {
     color: #283136;
 }
 
-.block-item:link {
+.block-item {
     opacity: 0.2;
 }
 
-.block-item:hover {
+.block-item:hover,
+.block-item:focus {
     opacity: 1;
 }
 
@@ -214,7 +217,7 @@ b {
     color: #444444;
 }
 
-.social-button:link {
+.social-button {
     background-color: #ffffff;
 } 
 
@@ -230,23 +233,18 @@ b {
 
 .modal input {
     font: inherit;
+    color: #444444;
+    opacity: 0.5; 
+    border: 2px solid #d7dbdd;
     background-color: #ffffff;
 }
 
-.modal input:link {
-    color: #444444;
-    opacity: 0.5; 
-    border: 2px solid #d7dbdd; 
-}
 
 .modal input:hover {
-    color: #444444;
-    opacity: 0.5;
     border: 2px solid #b3b8bb;
 }
 
 .modal input:focus {
-    color: #444444;
     border: 2px solid #000000;
 }
 
@@ -260,11 +258,12 @@ b {
     background-color: #fb5559;
 }
 
-.modal .close-button:link {
+.modal .close-button {
     color: #fecccd;
 }
 
-.modal .close-button:hover {
+.modal .close-button:hover,
+.modal .close-button:focus {
     color: #fb565a;
 }
 
@@ -284,24 +283,26 @@ b {
 }
 
 .range-controls,
-.filter .submit-button:link,
-.pagination-link:link {
+.filter .submit-butto,
+.pagination-link {
     background-color: #ededed;
 }
 
-.sort-link:focus,
-.sort-link:active {
+.sort-link {
     font-size: 14px;
     line-height: 18px;
     color: #000000;
-}
-
-.sort-link:link {
     opacity: 0.3;
 }
 
 .sort-link:hover {
+    color: #000000;
     opacity: 0.6;
+}
+
+.sort-link:focus,
+.sort-link:active {
+    color: #000000;
 }
 
 .filter-option .desc,
@@ -310,15 +311,17 @@ b {
     line-height: 20px;
 }
 
-.input-radio .desc:link,
-.input-radio .desc:disabled,
-.input-checkbox .check:link,
+.input-radio .desc,
+.input-checkbox .check,
 .input-checkbox .check:hover,
-.input-checkbox .check:disabled {
+.input-checkbox .check:focus,
+.input-checkbox .check:disabled,
+.input-radio .desc:disabled {
     color: #283136;
 }
 
-.input-radio .desc:hover {
+.input-radio .desc:hover,
+.input-radio .desc:focus {
     color: #000000;
 }
 
@@ -327,48 +330,48 @@ b {
     opacity: 0.3;
 }
 
-.filter .submit-button:link
+.filter .submit-button
 .filter .submit-button:hover,
-.pagination-link:link,
+.filter .submit-button:focus,
+.pagination-link,
 .pagination-link:hover,
-.pagination-link:active{
+.pagination-link:focus {
     font: inherit;
     color: #000000;
 }
 
-.filter .submit-button:hover,
-.pagination-link:hover {
+.filter .submit-button:active,
+.pagination-link:hover,
+.pagination-link:focus {
     background-color: #dfdfdf;
 }
 
 .filter .submit-button:focus,
-.pagination-link:focus, {
+.pagination-link:active {
     color: rgba(0,0,0,0.3);
     background-color: #d5d5d5;
     border-top: 2px solid #c0c0c0;
 }
-
+/*
 .pagination-link:active {
     background-color: #ffffff;
     border: 2px solid #dbdbdb;
-}
-
+} Активный пункт в styleguide - тоже позже стили?
+*/
 
 .product-link .button {
     font: inherit;
     color: #ffffff;
     text-align: center;
-}
-
-.product-link .button:link {
     background-color: #fb5559;
 }
 
-.product-link .button:hover {
+.product-link .button:hover,
+.product-link .button:focus{
     background-color: #e74246;
 }
 
-.product-link .button:focus {
+.product-link .button:active {
     background-color: #d7363a;
 }
 
