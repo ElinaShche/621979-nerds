@@ -46,24 +46,16 @@ a {
     background-color: #eeeeee;
     }
 
-.navigation-link,
-.navigation-link:active {   
+.navigation-link {   
     font-size: 16px;
     line-height: 30px;
     color: #000000;
+    text-transform: inherit;
 }
 
 .navigation-link:hover,
 .navigation-link:focus {
     color: #fb565a;
-}
-
-.navigation-link:focus {
-    opacity: 0.3;
-}
-
-.navigation-link:active {
-    border-bottom: 2px solid #fb5559;
 }
 
 .slider-item h2,
@@ -81,37 +73,20 @@ p,
 }
 
 .button {
-    font-family: inherit;
+    font: inherit;
     text-align: center;
     vertical-align: middle;
     text-transform: uppercase;
-}
-
-.slider-item .button,
-.promo-item .button {
-    color: #ffffff;
     background-color: #fb5559;
+    color: #ffffff;    
 }
 
-.slider-item .button,
-.veb-sites .button,
-.contacts .button,
-.modal {
-    background-color: #fb5559;
-}
-
-.slider-item .button:hover,
-.veb-sites .button:hover,
-.social .button:hover,
-.slider-item .button:focus,
-.veb-sites .button:focus,
-.social .button:focus {
+.button:hover,
+.button:focus {
     background-color: #e74246;
 }
 
-.slider-item .button:active,
-.veb-sites .button:active,
-.social .button:active {
+.button:active {
     background-color: #d7363a;
 }
 
@@ -145,7 +120,6 @@ p,
 }
 
 .present .button:active {
-    color: #ffffff;
     background-color: #e5a722;
 }
 
@@ -163,14 +137,14 @@ b {
     font-weight: bold;  
 }
 
-.aside .top {
+.aside-top {
     font-size: 45px;
     line-height: 10px;
     color: #000000;
     font-weight: bold;
 }
 
-.aside .bottom {
+.aside-bottom {
     font: inherit;
     color: #283136;
 }
@@ -201,8 +175,6 @@ b {
     font-weight: bold;
     text-align: center;
 } 
-
-
 
 .social b {
     font-size: 36px;
@@ -239,7 +211,6 @@ b {
     background-color: #ffffff;
 }
 
-
 .modal input:hover {
     border: 2px solid #b3b8bb;
 }
@@ -253,21 +224,16 @@ b {
     border: 2px solid #e74145;
 }
 
-.modal .submit-button {
-    color: #ffffff;
-    background-color: #fb5559;
-}
-
-.modal .close-button {
+.close-button {
     color: #fecccd;
 }
 
-.modal .close-button:hover,
-.modal .close-button:focus {
+.close-button:hover,
+.close-button:focus {
     color: #fb565a;
 }
 
-.modal .close-button:active {
+.close-button:active {
     color: #ffeeee;
 }
 
@@ -283,7 +249,7 @@ b {
 }
 
 .range-controls,
-.filter .submit-butto,
+.filter .submit-button,
 .pagination-link {
     background-color: #ededed;
 }
@@ -311,6 +277,7 @@ b {
     line-height: 20px;
 }
 
+/*
 .input-radio .desc,
 .input-checkbox .check,
 .input-checkbox .check:hover,
@@ -329,8 +296,9 @@ b {
 .input-checkbox .check:disabled {
     opacity: 0.3;
 }
+*/
 
-.filter .submit-button
+.filter .submit-button,
 .filter .submit-button:hover,
 .filter .submit-button:focus,
 .pagination-link,
@@ -359,19 +327,19 @@ b {
 } Активный пункт в styleguide - тоже позже стили?
 */
 
-.product-link .button {
+.button-product {
     font: inherit;
     color: #ffffff;
     text-align: center;
     background-color: #fb5559;
 }
 
-.product-link .button:hover,
-.product-link .button:focus{
+.button-product:hover,
+.button-product:focus{
     background-color: #e74246;
 }
 
-.product-link .button:active {
+.button-product:active {
     background-color: #d7363a;
 }
 
