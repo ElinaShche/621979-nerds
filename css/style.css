@@ -42,6 +42,10 @@ a {
     list-style: none;
     }
 
+li {
+   list-style: none; 
+}
+
 .main-header {
     background-color: #eeeeee;
     }
@@ -58,8 +62,7 @@ a {
     color: #fb565a;
 }
 
-.slider-item h2,
-.page-header h2 {
+ h2 {
     font-size: 55px;
     line-height: 55px;
     color: #000000;
@@ -78,7 +81,8 @@ p,
     vertical-align: middle;
     text-transform: uppercase;
     background-color: #fb5559;
-    color: #ffffff;    
+    color: #ffffff;
+    text-transform: uppercase;
 }
 
 .button:hover,
@@ -88,6 +92,10 @@ p,
 
 .button:active {
     background-color: #d7363a;
+}
+
+.slider-indicator {
+    text-align: center;
 }
 
 .promo-item h2 {
@@ -167,7 +175,6 @@ b {
     background-color: #ffffff;
 }
 
-.contacts h4,
 .product-item {
     font-size: 18px;
     line-height: 30px;
@@ -189,13 +196,10 @@ b {
     color: #444444;
 }
 
-.social-button {
+.social-button,
+.modal {
     background-color: #ffffff;
 } 
-
-.modal {
-    background-color: #e9e5dc;
-}
 
 .modal .help-block {
     font: inherit;
@@ -346,6 +350,79 @@ b {
 
 
  
+
+body,
+.inner-page body {
+    width: 1440px;
+    height: 2476px;
+}
+
+.main-header {
+    width: inherit;
+    padding-left,
+    padding-right: 120px;
+    
+}
+
+.main-navigation {
+    width: inherit;
+    height: 112px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+
+.site-navigation {
+    display: flex;
+}
+
+.slider-item {
+    display: flex;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+
+.promo-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1100px;
+    height: 350px;
+    margin-left: 140px;
+    margin-right: 200px;
+}
+
+.studio {
+    width: 1160px;
+    height: 528px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 140px;
+    margin-right: 140px;
+}
+
+.features {
+    width: 660px;
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+}
+
+.block {
+    width: 1160px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.social {
+    display: flex;
+    margin-left: 140px;
+    margin-right: 140px;
+}
 
 
 
