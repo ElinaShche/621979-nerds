@@ -9,7 +9,7 @@ css/
 | - [другие *.css файлы]
 
 body,
-.inner-page body {
+.inner-page body /* Как подключить стили к каталогу?*/ {
     margin: 0;
     padding: 0;
     font-family: "Roboto", "Arial", sans-serif;
@@ -20,16 +20,16 @@ body,
     background-color: #ffffff;
     }
 
-.main-header-logo {
+.header-logo { 
     opacity: 1;
 }
 
-.main-header-logo:hover,
-.main-header-logo:focus {
+.header-logo:hover,
+.header-logo:focus {
     opacity: 0.8;
 }
 
-.main-header-logo:active {
+.header-logo:active { /* */
     opacity: 0.3;
 }
 
@@ -42,7 +42,7 @@ a {
     list-style: none;
     }
 
-li {
+/*Классы надо? */ul {
    list-style: none; 
 }
 
@@ -68,7 +68,7 @@ li {
     color: #000000;
 }
 
-p,
+.slider-text p,
 .features-item {
     font-size: 16px;
     line-height: 24px;
@@ -138,7 +138,7 @@ p,
     color: #000000;
 }
 
-b {
+/*Классы надо? */b {
     font-size: 16px;
     line-height: 24px;
     color: #000000;
@@ -351,55 +351,67 @@ b {
 
  
 
-body,
-.inner-page body {
-    width: 1440px;
-    height: 2476px;
+body {
+    min-width: 1440px;
 }
 
 .main-header {
-    width: inherit;
-    padding-left,
-    padding-right: 120px;
+    padding-left: 140px;
+    padding-right: 140px;
     
 }
 
-.main-navigation {
-    width: inherit;
-    height: 112px;
+.navigation {
     display: flex;
-    align-items: flex-end;
-    padding-left: 140px;
-    padding-right: 140px;
+    justify-content: space-between;
+    align-items: center;  
 }
 
 .site-navigation {
+    min-width: 800px;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navigation-link a {
+    min-width: 110px; 
+    
+}
+
+.site-navigation li:last-child {
+    margin-left: auto;
 }
 
 .slider-item {
     display: flex;
-    padding-left: 140px;
-    padding-right: 140px;
+}
+
+.slider-text {
+    width: ;   /* Текст слайда лежит поверх картинки. Как сделать?*/
+}
+
+.visually-hidden {
+    visibility: hidden;
 }
 
 .promo-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1100px;
-    height: 350px;
-    margin-left: 140px;
-    margin-right: 200px;
+    padding-left: 140px;
+    padding-right: 200px;
+}
+
+.promo-item {
+    min-width: 400px;
 }
 
 .studio {
-    width: 1160px;
-    height: 528px;
     display: flex;
     justify-content: space-between;
-    margin-left: 140px;
-    margin-right: 140px;
+    padding-left: 140px;
+    padding-right: 140px;
 }
 
 .features {
@@ -412,17 +424,61 @@ body,
 }
 
 .block {
-    width: 1160px;
     display: flex;
     justify-content: space-between;
-    margin: auto;
+    padding-left: 140px;
+    padding-right: 140px;
 }
+
+/*Как квадрат контактов наложить на карту? */
 
 .social {
     display: flex;
-    margin-left: 140px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+
+.social-list {
+    display: flex;
+    justify-content: flex-start;
+    min-width: 260px;
     margin-right: 140px;
 }
+
+.social-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /*Здесь не действует....? */
+    align-items: flex-start;
+}
+
+.page-header h1 {
+    text-align: center;
+}
+
+.filters-produkt {
+    display: flex;
+}
+
+.filter-sort {
+    display: flex;
+}
+
+.sort-title {
+    display: flex;
+}
+
+.product-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pagination-list {
+    display: flex;
+}
+
 
 
 

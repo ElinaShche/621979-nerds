@@ -7,10 +7,10 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body class="inner-page">
+  <body>
       <header class="page-header">
-        <nav class="page-navigation">
-            <a class="page-header-logo" href="index.html">
+        <nav class="navigation">
+            <a class="header-logo" href="index.html">
                <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип магазина Нердс">
             </a>
             <ul class="site-navigation">
@@ -25,10 +25,10 @@
       </header>
       
       <main class="page-container">
-          
+         <div class="filters-produkt"> 
           <section class="filters"> 
               <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-              <fieldset>
+              <fieldset class="filter">
               <legend class="short-title">Стоимость</legend>
                       <div class="range-controls">
                             <div class="scale"><div class="bar"></div></div>
@@ -39,18 +39,8 @@
                           от <input class="min-price" type="text" placeholder="0"> 
                           до <input class="max-price" type="text" placeholder="15 000">
                       </div>
-              </fieldset>
-              <fieldset>
-                 <legend class="short-title">Сортировать:</legend>
-                 <ul class="sort-title">                 
-                    <li><a class="sort-link" href="#">По цене</a></li>
-                    <li><a class="sort-link" href="#">По типу</a></li>
-                    <li><a class="sort-link" href="#">По названию</a></li>
-                    <li><a class="sort-link arrow-down" href="#"></a></li>
-                    <li><a class="sort-link arrow-up" href="#"></a></li>
-                 </ul>
-                  </fieldset>                  
-                  <fieldset>
+              </fieldset>               
+                  <fieldset class="filter">
                       <legend class="short-title">Сетка</legend>
                       <ul>
                           <li class="filter-option">
@@ -66,7 +56,7 @@
                           </li>
                       </ul>                     
                   </fieldset>
-                  <fieldset>
+                  <fieldset class="filter">
                     <legend class="short-title">Особенности</legend>
                       <ul>
                         <li class="filter-option">
@@ -94,6 +84,20 @@
                   <button type="submit" class="submit-button">Показать</button>
                 </form>
           </section>
+          
+          <div class="sort-produkt">
+          <div class="sort">
+              <form class="filter filter-sort" method="get" action="https://echo.htmlacademy.ru">
+                 <legend class="short-title">Сортировать:</legend>
+                 <ul class="sort-title">                 
+                    <li><a class="sort-link" href="#">По цене</a></li>
+                    <li><a class="sort-link" href="#">По типу</a></li>
+                    <li><a class="sort-link" href="#">По названию</a></li>
+                    <li><a class="sort-link arrow-down" href="#"></a></li>
+                    <li><a class="sort-link arrow-up" href="#"></a></li>
+                 </ul>
+              </form>
+          </div>
           
           <section class="product">
               <ul class="product-info">
@@ -147,6 +151,8 @@
                  </li>
               </ul>
           </section>
+    </div>
+    </div>
           
           <section class="pagination">
               <ul class="pagination-list">
@@ -156,6 +162,7 @@
                   <li><a class="pagination-link" href="#">Следующая</a></li>
               </ul>              
           </section>
+             
       </main>
       
       <footer class="footer">
@@ -175,8 +182,10 @@
                   <li><a class="social-button" href="#">Фейсбук</a></li>
                   <li><a class="social-button" href="#">Инстаграм</a></li>
               </ul>
+              <div class="social-text">
               <b>Давайте дружить, это выгодно!</b>
               <p>Скидка 10% для друзей из социальных сетей.</p>
+              </div>
           </section>
       </footer>
       
