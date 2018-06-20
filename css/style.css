@@ -138,7 +138,8 @@ a {
     color: #000000;
 }
 
-/*Классы надо? */b {
+.social-text b,
+.features b {
     font-size: 16px;
     line-height: 24px;
     color: #000000;
@@ -170,9 +171,17 @@ a {
     opacity: 0.1;
 }
 
+.map {
+    background: #ffffff url("img/map.jpg") no-repeat; 
+}/*Что не так? Контакты не на карте*/
+
 .contacts {
+    width: 320px;
+    height: 310px;
     color: #666666;
     background-color: #ffffff;
+    border: 2px solid #000000;/* Рамка-временно*/
+    margin-left: 140px;
 }
 
 .product-item {
@@ -352,13 +361,14 @@ a {
  
 
 body {
-    min-width: 1440px;
+     /*Что с шириной, путаюсь*/
+    box-sizing: border-box;
 }
 
 .main-header {
     padding-left: 140px;
     padding-right: 140px;
-    
+
 }
 
 .navigation {
@@ -385,6 +395,10 @@ body {
 
 .slider-item {
     display: flex;
+}
+
+.slide1 {
+    background: url("img/nerds-index-slide1.png") no-repeat center right;/*Правильно? Пробую с первым слайдом - фон, но ничего не меняется*/
 }
 
 .slider-text {
@@ -430,8 +444,6 @@ body {
     padding-right: 140px;
 }
 
-/*Как квадрат контактов наложить на карту? */
-
 .social {
     display: flex;
     justify-content: flex-start;
@@ -448,10 +460,8 @@ body {
 }
 
 .social-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /*Здесь не действует....? */
-    align-items: flex-start;
+    text-align: left;
+    vertical-align: middle;
 }
 
 .page-header h1 {
@@ -472,26 +482,21 @@ body {
 
 .product-info {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;/*Почему рядом по две не ложатся?*/
 }
 
 .pagination-list {
     display: flex;
 }
 
+.page-container {
+    padding-left: 140px;
+    padding-right: 140px;
+}
+
+.page-header {
+    padding-left: 140px;
+    padding-right: 140px;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
