@@ -34,6 +34,7 @@ a {
     text-transform: uppercase;
     background-color: #fb5559;
     color: #ffffff;
+    display: inline-block;
 }
 
 .button:hover,
@@ -116,6 +117,15 @@ a {
     color: #fb565a;
 }
 
+.navigation-link:active {
+    border-bottom: 2px solid #fb5559;           /*не работает*/
+}
+
+.cart {
+    vertical-align: middle;
+    margin-right: 25px;
+}
+
 .visually-hidden {
 border: 0;
 clip: rect(0 0 0 0);
@@ -138,13 +148,25 @@ white-space: nowrap;
 }
 
 .slider-item {
-    display: flex;
-    justify-content: space-between;
+    padding-top: 25px; 
 }
 
-.slider-text {
-    width: 380px;
-    margin: 0;
+.slide1 {
+    background-image: url("../img/nerds-index-slide1.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.slide2 {
+    background-image: url("../img/nerds-index-slide2.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.slide3 {
+    background-image: url("../img/nerds-index-slide3.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
 }
 
 .slider-item h2 {
@@ -158,7 +180,7 @@ white-space: nowrap;
     font-size: 16px;
     line-height: 24px;
     color: #283136;
-    margin-bottom: 40px;   /*не работает*/
+    margin-bottom: 40px;   
 }
 
 .slider-button {
@@ -166,8 +188,47 @@ white-space: nowrap;
     margin-bottom: 77px;
 }
 
-/*
-  background-image: url("../img/nerds-index-slide1.png");  */
+.slider-controls {       /*кнопочки. как доделать?*/
+  position: absolute;
+  left: 300px;
+  bottom: 105px;
+  z-index: 100;
+  
+  width: 90px;
+  height: 18px;
+
+  text-align: center;
+  font-size: 0;
+  transform: translateX(-50%);
+}
+
+.slider-controls label {
+  position: relative;
+  
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  padding: 8px;
+  
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls label::after {
+  content: "";
+  
+  position: absolute;
+  top: 8px;
+  left: 58px;
+  z-index: 1;
+  
+  width: 18px;
+  height: 18px;
+  
+  background: #ffffff;
+  
+  border-radius: 50%;
+}
   
                                                    /*Конец слайдера*/
 
@@ -243,7 +304,7 @@ white-space: nowrap;
 
 .studio-container {
     width: 1200px;
-    padding: 50px 20px 40px 20px;
+    padding: 40px 20px 53px;
     outline: 1px solid red;      
     margin: 0 auto;
     display: flex;
@@ -252,6 +313,8 @@ white-space: nowrap;
 
 .studio-features {
     width: 660px;
+    padding-top: 40px;
+    
 }
 
 .studio-features h3 {
@@ -259,52 +322,61 @@ white-space: nowrap;
     line-height: 45px;
     color: #000000;
     margin-bottom: 30px;
+    margin-top: 0;
 }
 
-.studio-features p {
-    margin-bottom: 40px;
-}
-
-.studio-features b {
-    font-size: 16px;
-    line-height: 24px;
-    color: #000000;
-    font-weight: bold; 
-    margin-bottom: 30px;         /*не реагирует*/
-}
-
+.studio-features p,
 .features-item {
     font-size: 16px;
     line-height: 24px;
     color: #283136;
+    margin-bottom: 40px;
+}
+
+.studio-features b {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    font-weight: bold; 
+    margin-bottom: 30px;         
+}
+
+.features-item {
     margin-bottom: 25px;
 }
 
 .aside {
     width: 360px;
-    display: flex;
-    flex-direction: column;
-}
-
-.aside b {
-    margin-bottom: 45px;
-}
-
-.aside-top {
-    font-size: 45px;
-    line-height: 55px;
-    color: #000000;
-    font-weight: bold;
-    margin-bottom: 25px;      /*не реагирует*/
-}
-
-.aside-bottom {
-    font: inherit;
-    color: #283136;
 }
 
 .aside-illustration {
     margin-bottom: 40px;
+}
+
+.aside b {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.aside-top  {
+    display: inline-block;
+    font-size: 45px;
+    line-height: 55px;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 22px;      
+}
+
+.aside-bottom  {
+    display: inline-block;
+    font: inherit;
+    color: #283136;
 }
 
 .block-container {
@@ -330,12 +402,14 @@ white-space: nowrap;
 }
 
 .map {
+    margin: 0;
+    padding: 0;
     background: url("../img/map.jpg") no-repeat center;   /*высота 416-310=106:2=53*/   
 }
 
 .map-container {
     width: 1200px;
-    padding: 53px 20px;
+    padding: 40px 20px;
     outline: 1px solid red;
     margin: 0 auto;   
 }
@@ -357,6 +431,7 @@ white-space: nowrap;
 }
 
 .telephone {
+    display: inline-block;
     margin-bottom: 35px;
 }
 
@@ -368,12 +443,13 @@ white-space: nowrap;
     width: 1200px;
     padding: 0 20px; 
     outline: 1px solid red;
-    margin: 0 auto;
+    margin: 70px auto;
     display: flex;  
     align-items: center;
 }
 
 .social-list {
+    width: 400px;
     display: flex;
     margin: auto 0;
     margin-right: ;  
@@ -381,7 +457,32 @@ white-space: nowrap;
 }
 
 .social-button {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
     margin-right: 12px;
+    background-color: #e1e1e1;
+}
+
+.social-icon {
+    position: absolute;
+    left: ;
+    bottom: ;
+}
+
+.social-button:hover,
+.social-button:focus {
+    background-color: #e74246;
+}
+
+.social-button:active {
+    background-color: #d7363a;
+    color: #e37375;            /*как изменить цвет самой иконки?*/
+}
+
+.social-icon:active {     
+    color: #e37375;           /*или сюда цвет... Но это же картинка!*/
 }
 
 .social-text {
@@ -406,45 +507,84 @@ white-space: nowrap;
     background-color: transparent;
 }
 
-.modal-conteiner { 
+.modal-container { 
     width: 960px;
     margin: 0 auto;
     padding: 0 100px;
     padding-top: 70px;
     padding-bottom: 85px;
-    outline: 1px solid red;
     background-color: #ffffff;
+    box-shadow: 0 0 20px 15px #eaeaea; 
 }
 
-.modal-contacts .help-block {
-    font: inherit;   /*модальное Как поставить инпут под лейблом? бр?     +каталог 111строка*/
+.modal-container h2 {
+    font-size: 45px;
+    line-height: 45px;
+    color: #000000;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+.modal-contacts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.help-block {
+    font: inherit;   
     color: #000000;
     font-weight: bold;
+    margin-bottom: 35px;
 }
 
-.modal-contacts input {
+.modal-contacts input,
+.modal-container textarea {
+    width: 360px;
     font: inherit;
     color: #444444;
     opacity: 0.5; 
     border: 2px solid #d7dbdd;
     background-color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    padding-top: 15px; 
+    padding-bottom: 13px;
+    padding-left: 13px;
+    display: inline-block;
 }
 
-.modal-contacts input:hover {
+.modal-container textarea {
+    width: 100%;
+}
+
+.modal-contacts input:hover,
+.modal-container textarea:hover {
     border: 2px solid #b3b8bb;
 }
 
-.modal-contacts input:focus {
-    border: 2px solid #000000;
+.modal-contacts input:focus,
+.modal-container textarea:focus {
+    border: 2px solid #000000;   
 }
 
-.modal-contacts input:invalid {
+.modal-contacts input:invalid,
+.modal-container textarea:invalid {
     color: #e74246;
     border: 2px solid #e74145;
 }
 
+.modal-batton {
+    padding: 17px 85px 10px;
+    border: none;
+}
+
 .close-button {
     color: #fecccd;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: ;                  
+    right: ;
 }
 
 .close-button:hover,
@@ -454,10 +594,6 @@ white-space: nowrap;
 
 .close-button:active {
     color: #ffeeee;
-}
-
-.modal-batton {
-    padding: 17px 85px 10px;
 }
 
 .page-header-title {
@@ -486,22 +622,22 @@ white-space: nowrap;
 
 .filter-box {
     width: 270px; 
-    margin-top: 60px;
+    margin-top: 0;
     margin-right: 140px;
     margin-bottom: auto;
     outline: 1px solid red;
     padding: 0;  
 }
-
-                                                  /*Фильтр Стоимость*/
+                                                  /*Фильтр Стоимость. Что не так?*/
 
 .filter-item {
-  margin: 0 auto 52px;
+  margin: 0;
   padding: 0;
+  
   border: none;
   
-  /* Для демонстрации */
   width: 260px;
+  margin: 60px auto 55px; 
 }
 
 .range-filter {
@@ -517,26 +653,29 @@ white-space: nowrap;
 }
 
 .range-controls {
-  position: relative; 
+  position: relative;
+  
   height: 41px;
   margin-bottom: 15px;
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 20px;
+  
   background-color: #f1f1f1;
+  
   border-radius: 5px;
 }
 
 .range-controls .scale {
   height: 2px;
+
   background: #d7dcde;
 }
 
 .range-controls .bar {
   width: 70%;
   height: 2px;
-  margin-left: 20%; 
-  width: 30%;
+
   background: #00ca74;
 }
 
@@ -557,11 +696,11 @@ white-space: nowrap;
 }
 
 .range-controls .toggle-min {
-  left: 50px;
+  left: 18px;
 }
 
 .range-controls .toggle-max {
-  left: 110px;
+  left: 160px;
 }
 
 .price-controls {
@@ -599,10 +738,12 @@ white-space: nowrap;
 
 .filter-radio {
     margin-bottom: 43px;
+    padding-left: 0;
 }
 
 .filter-checkbox {
     margin-bottom: 48px;
+    padding-left: 0;
 }
 
 .filter-sort {
@@ -612,7 +753,9 @@ white-space: nowrap;
 }
 
 .sort-title {
+    width: 360px;
     display: flex;
+    justify-content: space-between;
 }
 
 .product-info {
@@ -625,8 +768,21 @@ white-space: nowrap;
 }
 
 .product-title {
-    margin-bottom: 35px;
-    
+    width: 360px;
+    margin-top: 0;
+    margin-bottom: 35px; 
+    padding-top: 0;  
+}
+
+.browser {
+   background-color: #e9e9e9;          /*изменить цвет на светлый*/
+    margin: 0;
+    padding: 0;
+}
+
+.browser:hover,
+.browser:focus {
+    background-color: #4d4d4d;
 }
 
 .product-link {
@@ -634,10 +790,6 @@ white-space: nowrap;
     padding-top: 33px;
     padding-bottom: 43px;
     text-align: center;  
-}
-
-.product-item {
-    margin-bottom: 20px;
 }
 
 .product-link p {
@@ -654,36 +806,41 @@ white-space: nowrap;
 
 .short-title {
     font-size: 18px;
-    line-height: 18px;
+    letter-spacing: 0px;
+    line-height: 30px;
     color: #000000;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
-.submit-button,
-.pagination-link {
-    background-color: #ededed;
-    border: none;
+.button-product {
+    padding: 17px 60px 14px;
 }
 
-.submit-button {
-    padding: 17px 90px 14px;
+.button-product:hover,
+.button-product:focus{
+    background-color: #e74246;
+}
+
+.button-product:active {
+    background-color: #d7363a;
 }
 
 .sort-produkt {
     outline: 1px solid red;
-    margin-top: 60px;
+    padding-top: 55px;
+    margin-top: 0;
 }
 
-.sort {
-    outline: 1px solid red;
-    padding: 0;
-}
+
 
 .sort-link {
+    display: inline-block;
     font-size: 14px;
     line-height: 18px;
     color: #000000;
     opacity: 0.3;
+    text-transform: uppercase;
 }
 
 .sort-link:hover {
@@ -700,43 +857,61 @@ white-space: nowrap;
 .filter-option .check {
     font-size: 16px;
     line-height: 20px;
+    vertical-align: top;
 }
 
-/*
-.input-radio .desc,
-.input-checkbox .check,
-.input-checkbox .check:hover,
-.input-checkbox .check:focus,
-.input-checkbox .check:disabled,
-.input-radio .desc:disabled {
+.input-checkbox {
+    width: 22px;
+    height: 22px;
+}
+
+.input-radio {
+    width: 22px;
+    height: 22px;
+    border-radius: 2px solid #a5a5a5;      /*  как увеличить толщину контура*/
+}
+
+.input-radio,
+.input-checkbox {
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+
+.input-radio, .desc,
+.input-checkbox, .check,
+.input-checkbox:hover, .check:hover,
+.input-checkbox:focus, .check:focus,
+.input-checkbox:disabled, .check:disabled,
+.input-radio:disabled, .desc:disabled {
     color: #283136;
 }
 
-.input-radio .desc:hover,
-.input-radio .desc:focus {
+.input-radio:hover, .desc:hover,
+.input-radio:focus, .desc:focus {
     color: #000000;
 }
 
-.input-radio .desc:disabled,
-.input-checkbox .check:disabled {
+.input-radio:disabled, .desc:disabled,
+.input-checkbox:disabled, .check:disabled {
     opacity: 0.3;
 }
-*/
 
 .submit-button,
-.submit-button:hover,
-.submit-button:focus,
-.pagination-link,
-.pagination-link:hover,
-.pagination-link:focus {
+.pagination-link {
     font: inherit;
-    color: #000000;
+    background-color: #ededed;
+    border: none;
+}
+
+.submit-button {
+    padding: 17px 90px 14px;
 }
 
 .submit-button:hover,
 .submit-button:focus,
 .pagination-link:hover,
 .pagination-link:focus {
+    color: #000000;
     background-color: #dfdfdf;
 }
 
@@ -747,42 +922,37 @@ white-space: nowrap;
     border-top: 2px solid #c0c0c0;
 }
 /*
-.pagination-link:active {
-    background-color: #ffffff;
+.pagination-link:....... {
+    background-color: #ffffff;               что такое активный пункт?
     border: 2px solid #dbdbdb;
-} Активный пункт в styleguide - тоже позже стили?
+}                                
 */
 
-.button-product {
-    padding: 17px 60px 14px;
-}
-
-.button-product:hover,
-.button-product:focus{
-    background-color: #e74246;
-}
-
-.button-product:active {
-    background-color: #d7363a;
-}
-
-.pagination-conteiner {
+.pagination-container {
     width: 1200px;
-    padding: 0 20px; 
+    padding: 25px 20px 60px; 
     outline: 1px solid red;
     margin: 0 auto;
-    margin-top: 25px;
-    margin-bottom: 60px;
 }
 
 .pagination-list {
-    outline: 1px solid red;
     display: flex;
+    padding: 0;
     padding-left: 400px; 
 }
 
 .pagination-link {
+    width: 50px;
+    height: 50px;
     margin-right: 10px;
+    text-align: center;
+    vertical-align: middle;                /*как цифры по центру?*/
+    color: #000000;
+}
+
+.pagination-submit {
+    width: auto;
+    padding: 17px 80px 14px;
 }
 
 
