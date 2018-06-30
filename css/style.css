@@ -46,7 +46,7 @@ a {
 .promo-list,
 .features-list,
 .social-list,        /* все <ul> */
-.radio,
+.radio-desc,
 .checkbox,
 .sort-title,
 .product-info,
@@ -103,6 +103,8 @@ a {
 
 .site-navigation li:last-child {
     margin-left: auto;
+    padding-left: 40px;
+    background: transparent url("../img/cart-icon.svg") no-repeat left center;
 }
 
 .navigation-link {   
@@ -117,13 +119,10 @@ a {
     color: #fb565a;
 }
 
-.navigation-link:active {
-    border-bottom: 2px solid #fb5559;           /*не работает*/
-}
-
-.cart {
-    vertical-align: middle;
-    margin-right: 25px;
+.navigation-link:active,
+.page-header-container .active {
+    color: #000000;
+    border-bottom: 2px solid #fb5559;          
 }
 
 .visually-hidden {
@@ -145,6 +144,7 @@ white-space: nowrap;
   margin: 0 auto;
   padding: 0 20px;
   outline: 1px solid red;
+    position: relative;
 }
 
 .slider-item {
@@ -152,21 +152,15 @@ white-space: nowrap;
 }
 
 .slide1 {
-    background-image: url("../img/nerds-index-slide1.png");
-    background-repeat: no-repeat;
-    background-position: right bottom;
+    background: url("../img/nerds-index-slide1.png") no-repeat right center;
 }
 
 .slide2 {
-    background-image: url("../img/nerds-index-slide2.png");
-    background-repeat: no-repeat;
-    background-position: right bottom;
+    background: url("../img/nerds-index-slide2.png") no-repeat right center;
 }
 
 .slide3 {
-    background-image: url("../img/nerds-index-slide3.png");
-    background-repeat: no-repeat;
-    background-position: right bottom;
+    background: url("../img/nerds-index-slide3.png") no-repeat right center;
 }
 
 .slider-item h2 {
@@ -188,7 +182,39 @@ white-space: nowrap;
     margin-bottom: 77px;
 }
 
-.slider-controls {       /*кнопочки. как доделать?*/
+.slider-controls {
+    min-width: 90px;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    bottom: 90px;
+    left: 558px;
+}
+
+.slider-controls-button {
+    width: 18px;
+    height: 18px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-right: 17px;
+    display: inline-block;  
+    
+}
+
+.slider-controls-button .active {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #c1c1c1;
+    background-color: #ffffff;
+    display: inline-block;
+    
+    
+}
+
+
+/*
+.slider-controls {       
   position: absolute;
   left: 300px;
   bottom: 105px;
@@ -229,8 +255,7 @@ white-space: nowrap;
   
   border-radius: 50%;
 }
-  
-                                                   /*Конец слайдера*/
+  */
 
 .promo-container {    
     width: 1200px;
@@ -404,7 +429,7 @@ white-space: nowrap;
 .map {
     margin: 0;
     padding: 0;
-    background: url("../img/map.jpg") no-repeat center;   /*высота 416-310=106:2=53*/   
+    background: url("../img/map.jpg") no-repeat center;   
 }
 
 .map-container {
@@ -463,10 +488,11 @@ white-space: nowrap;
     border-radius: 50%;
     margin-right: 12px;
     background-color: #e1e1e1;
+    
 }
 
 .social-icon {
-    position: absolute;
+                             /*выставить по центру*/
     left: ;
     bottom: ;
 }
@@ -509,12 +535,12 @@ white-space: nowrap;
 
 .modal-container { 
     width: 960px;
-    margin: 0 auto;
     padding: 0 100px;
     padding-top: 70px;
     padding-bottom: 85px;
     background-color: #ffffff;
     box-shadow: 0 0 20px 15px #eaeaea; 
+    position: absolute;                                    /*правильно?*/
 }
 
 .modal-container h2 {
@@ -582,9 +608,9 @@ white-space: nowrap;
     color: #fecccd;
     border: none;
     background-color: transparent;
-    position: absolute;
-    top: ;                  
-    right: ;
+    position: relative;              /*правильно?*/
+    top: -460px;                  
+    right: -740px;
 }
 
 .close-button:hover,
@@ -771,11 +797,12 @@ white-space: nowrap;
     width: 360px;
     margin-top: 0;
     margin-bottom: 35px; 
-    padding-top: 0;  
+    padding-top: 40px;
+    background: url("../img/browser.svg") no-repeat top;
 }
 
-.browser {
-   background-color: #e9e9e9;          /*изменить цвет на светлый*/
+/*.browser {
+   background-color: #e9e9e9;          
     margin: 0;
     padding: 0;
 }
@@ -783,7 +810,7 @@ white-space: nowrap;
 .browser:hover,
 .browser:focus {
     background-color: #4d4d4d;
-}
+}*/
 
 .product-link {
     width: 360px;              
@@ -832,8 +859,6 @@ white-space: nowrap;
     margin-top: 0;
 }
 
-
-
 .sort-link {
     display: inline-block;
     font-size: 14px;
@@ -853,46 +878,57 @@ white-space: nowrap;
     color: #000000;
 }
 
-.filter-option .desc,
-.filter-option .check {
+.radio,
+.check {
     font-size: 16px;
     line-height: 20px;
-    vertical-align: top;
-}
-
-.input-checkbox {
-    width: 22px;
-    height: 22px;
-}
-
-.input-radio {
-    width: 22px;
-    height: 22px;
-    border-radius: 2px solid #a5a5a5;      /*  как увеличить толщину контура*/
-}
-
-.input-radio,
-.input-checkbox {
-    margin-bottom: 15px;
-    margin-right: 10px;
-}
-
-.input-radio, .desc,
-.input-checkbox, .check,
-.input-checkbox:hover, .check:hover,
-.input-checkbox:focus, .check:focus,
-.input-checkbox:disabled, .check:disabled,
-.input-radio:disabled, .desc:disabled {
     color: #283136;
+    vertical-align: middle;
 }
 
-.input-radio:hover, .desc:hover,
-.input-radio:focus, .desc:focus {
+.radio-option {
+    height: 25px;
+    margin-bottom: 15px;  
+}
+
+.radio::before {
+    content: "";
+    background:  url("../img/radio-off.svg") no-repeat left;  
+    padding-left: 33px;
+    color: ##b8b8b8;
+}
+
+.input-radio:checked + .radio::before {
+    content: ""; 
+    background: url("../img/radio-on.svg") no-repeat left; 
+}
+
+.check-option {
+    height: 23px;
+    margin-bottom: 17px;
+}
+
+.check::before {
+    content: "";
+    background: url("../img/checkbox-off.svg") no-repeat left;
+    padding-left: 33px;
+}
+
+ .input-check:checked + .check::before {
+    content: ""; 
+    background: url("../img/checkbox-on.svg") no-repeat left;
+}
+
+.radio:hover,
+.radio:focus,
+.check:hover,
+.check:focus {
     color: #000000;
 }
 
-.input-radio:disabled, .desc:disabled,
-.input-checkbox:disabled, .check:disabled {
+.radio:disabled,
+.check:disabled {
+    color: #000000;
     opacity: 0.3;
 }
 
@@ -954,6 +990,4 @@ white-space: nowrap;
     width: auto;
     padding: 17px 80px 14px;
 }
-
-
 

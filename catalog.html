@@ -19,7 +19,7 @@
                         <li><a class="navigation-link" href="#">Клиенты</a></li>
                         <li><a class="navigation-link active" href="#">Магазин</a></li>
                         <li><a class="navigation-link" href="#">Контакты</a></li>
-                        <li><a class="navigation-link" href="#"><img class="cart" src="img/cart-icon.svg" width="15" height="15" alt="Корзина">Корзина</a></li>
+                        <li><a class="navigation-link" href="#">Корзина</a></li>
                     </ul>
                 </nav>
                 <div class="page-header-title">
@@ -51,41 +51,41 @@
                   </fieldset>   
                   <fieldset class="filter filter-radio">
                       <legend class="short-title">Сетка</legend>
-                      <ul class="radio">
-                          <li class="filter-option">
-                              <input class="input-radio" type="radio" name="product-group" id="filter-adapter" checked>
-                              <label for="filter-adapter" class="desc">Адаптивная</label>
+                      <ul class="radio-desc">
+                          <li class="radio-option">
+                              <input class="visually-hidden input-radio" type="radio" name="product-group" id="filter-adapter" checked>
+                              <label for="filter-adapter" class="radio">Адаптивная</label>
                           </li>
-                          <li class="filter-option">
-                          <input class="input-radio" type="radio" name="product-group" id="filter-fixed">
-                              <label for="filter-fixed" class="desc">Фиксированная</label></li>
-                          <li class="filter-option">
-                          <input class="input-radio" type="radio" name="product-group" id="filter-rubber">
-                              <label for="filter-rubber" class="desc">Резиновая</label>
+                          <li class="radio-option">
+                          <input class="visually-hidden input-radio" type="radio" name="product-group" id="filter-fixed">
+                              <label for="filter-fixed" class="radio">Фиксированная</label></li>
+                          <li class="radio-option">
+                          <input class="visually-hidden input-radio" type="radio" name="product-group" id="filter-rubber">
+                              <label for="filter-rubber" class="radio">Резиновая</label>
                           </li>
                       </ul>                     
                   </fieldset>
                   <fieldset class="filter filter-checkbox">
                     <legend class="short-title">Особенности</legend>
                       <ul class="checkbox">
-                        <li class="filter-option">
-                            <input class="input-checkbox" type="checkbox" name="slider" id="filter-slider" checked>
+                        <li class="check-option">
+                            <input class="visually-hidden input-check" type="checkbox" name="slider" id="filter-slider" checked>
                             <label for="filter-slider" class="check">Слайдер</label>
                         </li>
-                        <li class="filter-option">
-                            <input class="input-checkbox" type="checkbox" name="features" id="filter-features">
+                        <li class="check-option">
+                            <input class="visually-hidden input-check" type="checkbox" name="features" id="filter-features">
                             <label for="filter-features" class="check">Блок преимуществ</label>
                         </li>
-                        <li class="filter-option">
-                            <input class="input-checkbox" type="checkbox" name="news" id="filter-news" checked>
+                        <li class="check-option">
+                            <input class="visually-hidden input-check" type="checkbox" name="news" id="filter-news" checked>
                             <label for="filter-news" class="check">Новости</label>
                         </li>
-                        <li class="filter-option">
-                            <input class="input-checkbox" type="checkbox" name="gallery" id="filter-gallery">
+                        <li class="check-option">
+                            <input class="visually-hidden input-check" type="checkbox" name="gallery" id="filter-gallery">
                             <label for="filter-gallery" class="check">Галлерея</label>
                         </li>
-                        <li class="filter-option">
-                            <input class="input-checkbox" type="checkbox" name="basket" id="filter-basket">
+                        <li class="check-option">
+                            <input class="visually-hidden input-check" type="checkbox" name="basket" id="filter-basket">
                             <label for="filter-basket" class="check">Корзина</label>
                         </li>
                       </ul>
@@ -116,8 +116,7 @@
                         <p>Информационный сайт<br>для туристов</p><br>      
                         <a class="button button-product" href="#">9 900 руб.</a>
                       </div>
-                      <a class="browser hover" href="#"><img src="img/browser.svg" width="360" height="40" alt="Браузер"></a>
-                      <img class="img" src="img/img-sedona.jpg" width="360" height="576" alt="Седона">
+                      <img src="img/img-sedona.jpg" width="360" height="576" alt="Седона">
                   </li>
                   <li class="product-title">
                     <div class="product-link visually-hidden">
@@ -125,7 +124,6 @@
                        <p>Продуктовый лендинг<br>приложения для iOS и Android</p><br>
                         <a class="button button-product" href="#">9 900 руб.</a>
                     </div>
-                    <a class="browser" href="#"><img src="img/browser.svg" width="360" height="40" alt="Браузер"></a>
                     <img src="img/img-pink.jpg" width="360" height="576" alt="PINK APP">
                   </li>
                   <li class="product-title">
@@ -134,7 +132,6 @@
                       <p>Сайт салоны красоты.<br>Для мужчин, да.</p><br>
                       <a class="button button-product" href="#">9 900 руб.</a>
                     </div>
-                    <a class="browser" href="#"><img src="img/browser.svg" width="360" height="40" alt="Браузер"></a>
                     <img src="img/img-barbershop.jpg" width="360" height="576" alt="BARBERSHOP">
                   </li>
                   <li class="product-title">
@@ -143,7 +140,6 @@
                       <p>Интернет-магазин<br>вязаных игрушек.</p><br>
                       <a class="button button-product" href="#">9 900 руб.</a>
                     </div>
-                    <a class="browser" href="#"><img src="img/browser.svg" width="360" height="40" alt="Браузер"></a>
                     <img src="img/img-mishka.jpg" width="360" height="576" alt="MISHKA">
                  </li>
                  <li class="product-title">
@@ -152,7 +148,6 @@
                       <p>Лендинг курсов повышения<br>квалификации</p><br>
                       <a class="button button-product" href="#">9 900 руб.</a>
                     </div>
-                    <a class="browser" href="#"><img src="img/browser.svg" width="360" height="40" alt="Браузер"></a>
                     <img src="img/img-aplus.jpg" width="360" height="576" alt="A PLUS">
                  </li>
                  <li class="product-title">
@@ -161,7 +156,6 @@
                       <p>Промо-сайт производителя<br>крафтового кваса</p><br>
                       <a class="button button-product" href="#">9 900 руб.</a>
                     </div>
-                    <a class="browser" href="#"><img src="img/browser.svg" width="360" height="40" alt="Браузер"></a>
                     <img src="img/img-kvast.jpg" width="360" height="576" alt="КВАСТ">
                  </li>
               </ul>
