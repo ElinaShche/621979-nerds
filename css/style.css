@@ -123,7 +123,8 @@ a {
 
 .navigation-link:active {
     color: #000000;
-    opacity: 0.3;          
+    opacity: 0.3;
+    pointer-events: none;
 }
 
 .active-link {
@@ -752,13 +753,17 @@ white-space: nowrap;
   text-align: right;
 }                                                 /*Конец стоимости*/
 
-.filter-radio {
+.filter-radio {                         /*начало радио/чекбокса*/
     margin-bottom: 18px;
     padding-left: 0;
 }
 
 .radio-desc {
     margin-top: 8px;
+}
+
+.radio-option {
+    margin-bottom: 20px;  
 }
 
 .radio,
@@ -772,10 +777,6 @@ white-space: nowrap;
     vertical-align: middle;
 }
 
-.radio-option {
-    margin-bottom: 20px;  
-}
-
 .radio::before {
     content: "";
     position: absolute;
@@ -783,12 +784,13 @@ white-space: nowrap;
     top: 0;
     width: 25px;
     height: 25px;
-    background:  url("../img/radio-off.svg") no-repeat left;  
-    color: ##b8b8b8;
+    background: url("../img/radio-off.svg") no-repeat left; 
+    opacity: 0.3;
 }
 
-.input-radio:checked + .radio::before {                     /*можно селектор сократить?*/
-    background: url("../img/radio-on.svg") no-repeat left; 
+.input-radio:checked + .radio::before {                     
+    background: url("../img/radio-on.svg") no-repeat left;
+    opacity: 0.3;
 }
 
 .filter-checkbox {
@@ -812,26 +814,36 @@ white-space: nowrap;
     width: 23px;
     height: 23px;
     background: url("../img/checkbox-off.svg") no-repeat left;
+    opacity: 0.3;
 }
 
 .input-check:checked + .check::before {         
      width: 27px;
      height: 23px;
-    background: url("../img/checkbox-on.svg") no-repeat left;
+     background: url("../img/checkbox-on.svg") no-repeat left;
+     opacity: 0.3;
 }
 
 .radio:hover,
-.radio:focus,
-.check:hover,
-.check:focus {
+.check:hover {
     color: #000000;
 }
 
 .radio:disabled,
 .check:disabled {
-    color: #000000;
+    color: #283136;
     opacity: 0.3;
 }
+
+.input-radio:hover + .radio::before,
+.input-check:hover + .check::before {
+    opacity: 0.8;
+}
+
+.input-radio:disabled + .radio::before,
+.input-check:disabled + .check::before {
+    opacity: 0.1;
+}                                            /*конец радио/чекбокса*/
 
 .sort-produkt {
     outline: 1px solid red;
@@ -870,6 +882,7 @@ white-space: nowrap;
 .sort-link:active,
 .sort-active {
     color: #000000;
+    opacity: 1;
 }
 
 .product-info {
@@ -917,9 +930,6 @@ white-space: nowrap;
     text-align: center; 
     outline: 1px solid green;
     background-color: #eeeeee;
-}
-
-.product-link:not(.sedona) {
     display: none;
 }
 
@@ -978,6 +988,10 @@ white-space: nowrap;
     color: rgba(0,0,0,0.3);
     background-color: #d5d5d5;
     border-top: 2px solid #c0c0c0;
+}
+
+.pagination-link:active {
+    pointer-events: none;
 }
 
 .page {
