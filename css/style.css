@@ -12,7 +12,7 @@ body {
     font-family: "Roboto", "Arial", sans-serif;
     font-size: 16px;
     line-height: 18px;
-    font-weight: 400;
+    font-weight: 500;
     color: #000000;
     min-width: 1200px;
     background-color: #ffffff;
@@ -36,11 +36,17 @@ a {
     color: #ffffff;
     display: inline-block;
     border-radius: 5px;
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.1) inset;
 }
 
 .button:hover,
 .button:focus {
     background-color: #e74246;
+}
+
+.button:active {
+    background-color: rgba(215,54,58,0.5);
+    color: rgba(255,255,255,0.5);
 }
 
 .site-navigation,
@@ -124,13 +130,13 @@ a {
 .navigation-link:active {
     color: #000000;
     opacity: 0.3;
-    pointer-events: none;
 }
 
 .active-link {
     color: #000000;
     border-bottom: 2px solid #fb5559;
     padding-bottom: 10px;
+    pointer-events: none;
 }
 
 .visually-hidden {
@@ -156,7 +162,7 @@ white-space: nowrap;
 }
 
 .slider-item {
-    padding-top: 25px; 
+    padding-top: 26px; 
 }
 
 .slide1 {
@@ -175,19 +181,19 @@ white-space: nowrap;
     font-size: 55px;
     line-height: 55px;
     color: #000000;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 }
 
 .slider-item p {
     font-size: 16px;
     line-height: 24px;
     color: #283136;
-    margin-bottom: 40px;   
+    margin-bottom: 38px;   
 }
 
 .slider-button {
     padding: 18px 55px 14px;
-    margin-bottom: 77px;
+    margin-bottom: 79px;
 }
 
 .slider-controls {
@@ -236,7 +242,7 @@ white-space: nowrap;
 }
 
 .promo-illustration {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
 }
 
 .promo-item h2 {
@@ -458,7 +464,7 @@ white-space: nowrap;
 }
 
 .button-contacts {
-    padding: 17px 44px 14px;
+    padding: 17px 43px 15px;
 }
 
 .social-container {
@@ -558,8 +564,7 @@ white-space: nowrap;
 .modal textarea {
     width: 360px;
     font: inherit;
-    color: #444444;
-    opacity: 0.5; 
+    color: rgba (68,68,68,0.5); 
     border: 2px solid #d7dbdd;
     background-color: #ffffff;
     margin-top: 10px;
@@ -576,18 +581,23 @@ white-space: nowrap;
 
 .modal-contacts input:hover,
 .modal textarea:hover {
+    color: rgba(68,68,68,0.5);
     border: 2px solid #b3b8bb;
+    background-color: #ffffff;
 }
 
 .modal-contacts input:focus,
 .modal textarea:focus {
-    border: 2px solid #000000;   
+    color: rgb(68,68,68);
+    border: 2px solid #000000;
+    background-color: #ffffff;
 }
 
 .modal-contacts input:invalid,
 .modal textarea:invalid {
     color: #e74246;
     border: 2px solid #e74145;
+    background-color: #ffffff;
 }
 
 .modal-batton {
@@ -649,6 +659,8 @@ white-space: nowrap;
     color: #000000;
     font-weight: bold;
     text-transform: uppercase;
+    padding: 0;
+    margin: 0;
 }
 
 .filter-box {                         /*Фильтр Стоимость. */
@@ -660,18 +672,19 @@ white-space: nowrap;
 }
                                                   
 .filter-item {
-  padding: 0;
+    padding: 0;
+  padding-top: 58px;
   border: none;
   width: 260px;
-  margin: 57px auto 55px; 
+  margin: 0 auto 50px; 
 }
 
 .range-filter {
   width: 260px;
-  margin-top: 49px;
+  margin-top: 48px;
 }
 
-.filter-item legend {
+.filter-item h3 {
   font-size: 18px;
   line-height: 24px;
   text-transform: uppercase;
@@ -754,12 +767,12 @@ white-space: nowrap;
 }                                                 /*Конец стоимости*/
 
 .filter-radio {                         /*начало радио/чекбокса*/
-    margin-bottom: 18px;
+    margin-bottom: 13px;
     padding-left: 0;
 }
 
 .radio-desc {
-    margin-top: 8px;
+    margin-top: 12px;
 }
 
 .radio-option {
@@ -794,12 +807,12 @@ white-space: nowrap;
 }
 
 .filter-checkbox {
-    margin-bottom: 21px;
+    margin-bottom: 20px;
     padding-left: 0;
 }
 
 .checkbox {
-    margin-top: 8px;
+    margin-top: 15px;
 }
 
 .check-option {
@@ -848,13 +861,14 @@ white-space: nowrap;
 .sort-produkt {
     outline: 1px solid red;
     margin-top: 0;
+    width: 760px;
 }
 
 .filter-sort {
     display: flex;
     justify-content: space-between;
-    padding-top: 50px;
-    padding-bottom: 52px;
+    padding-top: 53px;
+    padding-bottom: 48px;
 }
 
 .sort-title {
@@ -871,6 +885,15 @@ white-space: nowrap;
     color: #000000;
     opacity: 0.3;
     text-transform: uppercase;
+}
+
+.sort-text {
+    margin-right: 25px;
+}
+
+.sort-down {
+    margin-left: 21px;
+    margin-right: 18px;
 }
 
 .sort-link:hover,
@@ -963,16 +986,19 @@ white-space: nowrap;
     background-color: #d7363a;
 }
 
+.submit-button {
+    padding: 17px 90px 14px;
+    border: none;
+    box-shadow: none;
+}
+
 .submit-button,
 .pagination-link {
     font: inherit;
+    color: #000000;
     background-color: #ededed;
     border: none;
-    color: #000000;
-}
-
-.submit-button {
-    padding: 17px 90px 14px;
+    box-shadow: none;
 }
 
 .submit-button:hover,
@@ -987,21 +1013,20 @@ white-space: nowrap;
 .pagination-link:active {
     color: rgba(0,0,0,0.3);
     background-color: #d5d5d5;
-    border-top: 2px solid #c0c0c0;
-}
-
-.pagination-link:active {
+    border: none;
+    box-shadow: 0px -3px 0px 0px #c0c0c0;
     pointer-events: none;
 }
 
 .page {
     background-color: #ffffff;              
     border: 2px solid #dbdbdb;
+    pointer-events: none;
 }                                
 
 .pagination {
     width: 1200px;
-    padding: 27px 20px 60px; 
+    padding: 29px 20px 60px; 
     outline: 1px solid red;
     margin: 0 auto;
 }
@@ -1025,6 +1050,8 @@ white-space: nowrap;
 
 .pagination-submit {
     width: auto;
-    padding: 17px 80px 14px;
+    padding: 18px 80px 14px;
+    border: none;
+    box-shadow: none;
 }
 

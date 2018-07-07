@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -33,7 +33,7 @@
           <section class="filter filter-box">
               <form method="get" action="https://echo.htmlacademy.ru">
                   <fieldset class="filter-item">
-                    <legend class="short-title">Стоимость:</legend>
+                    <h3 class="short-title">Стоимость:</h3>
                     <div class="range-filter">
                       <div class="range-controls">
                         <div class="scale">
@@ -50,7 +50,7 @@
                     </div>
                   </fieldset>   
                   <fieldset class="filter filter-radio">
-                      <legend class="short-title">Сетка</legend>
+                      <h3 class="short-title">Сетка</h3>
                       <ul class="radio-desc">
                           <li class="radio-option">
                               <input class="visually-hidden input-radio" type="radio" name="product-group" id="filter-adapter" checked>
@@ -66,7 +66,7 @@
                       </ul>                     
                   </fieldset>
                   <fieldset class="filter filter-checkbox">
-                    <legend class="short-title">Особенности</legend>
+                    <h3 class="short-title">Особенности</h3>
                       <ul class="checkbox">
                         <li class="check-option">
                             <input class="visually-hidden input-check" type="checkbox" name="slider" id="filter-slider" checked>
@@ -97,12 +97,12 @@
           <div class="sort-produkt">
           <div class="sort">
               <form class="filter filter-sort" method="get" action="https://echo.htmlacademy.ru">
-                 <legend class="short-title">Сортировать:</legend>
+                 <h3 class="short-title">Сортировать:</h3>
                  <ul class="sort-title">                 
-                    <li><a class="sort-link sort-active" href="#">По цене</a></li>
-                    <li><a class="sort-link" href="#">По типу</a></li>
-                    <li><a class="sort-link" href="#">По названию</a></li>
-                    <li><a class="sort-link sort-active" href="#"><img src="img/icon-down-dir.svg" width="11" height="10" alt="Вниз"></a></li>
+                    <li><a class="sort-link sort-active sort-text" href="#">По цене</a></li>
+                    <li><a class="sort-link sort-text" href="#">По типу</a></li>
+                    <li><a class="sort-link sort-text" href="#">По названию</a></li>
+                    <li><a class="sort-link sort-active sort-down" href="#"><img src="img/icon-down-dir.svg" width="11" height="10" alt="Вниз"></a></li>
                     <li><a class="sort-link" href="#"> <img src="img/icon-up-dir.svg" width="11" height="10" alt="Вверх"></a></li>
                  </ul>
               </form>
@@ -190,13 +190,13 @@
             <div class="social-container">
                 <ul class="social-list">
                     <li><a class="social-button" href="#">
-                        <img class="social-icon" src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте">
+                        <img src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте">
                         </a></li>
                     <li><a class="social-button" href="#">
-                        <img class="social-icon" src="img/fb-icon.svg" width="26" height="15" alt="Фейсбук">
+                        <img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук">
                         </a></li>
                     <li><a class="social-button" href="#">
-                        <img class="social-icon" src="img/insta-icon.svg" width="26" height="15" alt="Инстаграм">
+                        <img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм">
                         </a></li>
                 </ul>
                 <div class="social-text">
@@ -217,7 +217,7 @@
                     <label class="help-block">Текст письма:<br><textarea name="text" rows="5" placeholder="В свободной форме"></textarea></label><br>
                     <button type="submit" class="button modal-batton">Отправить</button>  
           </form>  
-          <button type="button" class="close-button"><img src="img/close-cross.svg" width="21" height="21"></button>
+          <button type="button" class="close-button"><img src="img/close-cross.svg" width="21" height="21" alt="Закрыть"></button>
       </section>
   </body>
 </html>
