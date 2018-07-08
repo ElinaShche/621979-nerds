@@ -563,8 +563,9 @@ white-space: nowrap;
 .modal-contacts input,
 .modal textarea {
     width: 360px;
-    font: inherit;
-    color: rgba (68,68,68,0.5); 
+    font-size: 16px;
+    line-height: 18px;
+    color: rgba(68,68,68,0.5); 
     border: 2px solid #d7dbdd;
     background-color: #ffffff;
     margin-top: 10px;
@@ -606,21 +607,24 @@ white-space: nowrap;
 }
 
 .close-button {
-    color: #fecccd;
     border: none;
-    background-color: transparent;
+    background-color: #ffffff;
     position: relative;              
     top: -460px;                  
     right: -740px;
 }
 
-.close-button:hover,
-.close-button:focus {
-    color: #fb565a;
+.close-button:link img {
+    opacity: 0.6;
 }
 
-.close-button:active {
-    color: #ffeeee;
+.close-button:hover img,
+.close-button:focus img {
+    opacity: 1;
+}
+
+.close-button:active img {
+    opacity: 0.3;
 }
 
 .page-header-title {
